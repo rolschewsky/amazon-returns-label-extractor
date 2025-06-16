@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Amazon Rücksende
+// @name         Amazon Retourenlabel Extractor
 // @namespace    https://olschewsky.eu/
-// @version      1.0
+// @version      1.1
 // @description  Extrahiert das Amazon Retourenlabel passen auf ein DIN A5 Format 
-// @author       ruediger@olschewsky.eu
+// @author       Rüdiger
 // @match        https://www.amazon.de/spr/returns/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=amazon.de
 // @require      https://code.jquery.com/jquery-3.7.0.min.js
@@ -93,7 +93,7 @@ function cleanupPage() {
     'use strict';
 
     $(document).ready(function() {
-        var button = $("<button>DHL-Vordruck verwenden!</button>");
+        var button = $("<button>Öffne als A5 Vordruck</button>");
         button.on("click", function() {
             cleanupPage();
             window.print();
