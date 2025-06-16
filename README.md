@@ -1,11 +1,11 @@
 # Installation
-In Tampermonkey ein neue Script anlegen mit folgneden Header:
+In Tampermonkey ein neues Script mit folgneden Header anlegen:
 
 ```
 // ==UserScript==
 // @name         Amazon Retourenlabel Extractor
 // @namespace    https://olschewsky.eu/
-// @version      1.3
+// @version      0
 // @description  Extrahiert das Amazon Retourenlabel passen auf ein DIN A5 Format 
 // @author       Rüdiger
 // @match        https://www.amazon.de/spr/returns/*
