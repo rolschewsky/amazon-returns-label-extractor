@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Amazon Retourenlabel Extractor
 // @namespace    https://olschewsky.eu/
-// @version      1.1
+// @version      1.2
 // @description  Extrahiert das Amazon Retourenlabel passen auf ein DIN A5 Format 
 // @author       Rüdiger
 // @match        https://www.amazon.de/spr/returns/*
@@ -95,13 +95,26 @@ function cleanupPage() {
     'use strict';
 
     $(document).ready(function() {
-        var button = $("<button>Öffne als A5 Vordruck</button>");
-        button.on("click", function() {
+        const btnID = crypto.randomUUID();
+
+        const injectedHtml = $(`
+        <span id="${btnID}" class="a-button">
+          <span class="a-button-inner">
+            <a class="a-button-text" href="#">
+              <span id="">Öffne als A5 Vordruck</span>
+            </a>
+          </span>
+        </span>
+        <span class="a-letter-space"></span>
+        `);
+
+        injectedHtml.insertBefore(".print-label-button");
+
+        $(`#${btnID}`).on("click", function() {
+            event.preventDefault();
+            event.stopPropagation();
             cleanupPage();
             window.print();
         });
-
-        button.insertBefore(".print-label-button");
-
     });
 })();
