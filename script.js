@@ -114,7 +114,9 @@ function cleanupPage() {
             event.preventDefault();
             event.stopPropagation();
             cleanupPage();
-            window.print();
+            setTimeout(() => {
+                window.print();
+            }, 250);
         });
     });
 })();
