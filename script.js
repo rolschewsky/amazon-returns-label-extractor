@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Amazon Retourenlabel Extractor
 // @namespace    https://olschewsky.eu/
-// @version      1.2
+// @version      1.3
 // @description  Extrahiert das Amazon Retourenlabel passen auf ein DIN A5 Format 
 // @author       Rüdiger
 // @match        https://www.amazon.de/spr/returns/*
