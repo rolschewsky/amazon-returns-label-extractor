@@ -1,5 +1,5 @@
 # Installation
-In Tampermonkey ein neues Script mit folgneden Header anlegen:
+In Tampermonkey ein neues Script mit folgendem Header anlegen:
 
 ```
 // ==UserScript==
